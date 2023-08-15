@@ -21,9 +21,6 @@ productRouter.get("/",(req,res,next,)=>{
     });
 })
 
-productRouter.get("/category",(req,res)=>{
-    res.send("category");
-});
 
 productRouter.post("/addProduct",(req,res,next)=>{
     let product = req.body;
@@ -35,7 +32,6 @@ productRouter.post("/addProduct",(req,res,next)=>{
             return res.status(500).json(err);
         }
     });
-
 })
 
 module.exports = productRouter;
